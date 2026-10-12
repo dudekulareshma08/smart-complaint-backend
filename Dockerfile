@@ -10,7 +10,3 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT:-8080} -jar app.jar"]
-cd C:\smart-complaint\backend
-git add Dockerfile
-git commit -m "Use Java 17 for Render deployment"
-git push origin main
